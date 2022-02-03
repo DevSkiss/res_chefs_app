@@ -10,6 +10,7 @@
 [✓] VS Code (version 1.63.2)
 ```
 
+### Step 1
 
 ```bash
 flutter channel stable
