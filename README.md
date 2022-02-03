@@ -1,16 +1,38 @@
-# res_chefs_app
 
-A new Flutter project.
+```bash
+[✓] Flutter (Channel stable, 2.8.1, on macOS 12.1 21C52 darwin-arm, locale en-PH)
+[✓] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
+[✓] Xcode - develop for iOS and macOS (Xcode 13.2)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2020.3)
+[✓] VS Code (version 1.63.2)
+```
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+```bash
+flutter channel stable
+```
 
-A few resources to get you started if this is your first Flutter project:
+Make sure to update your local version by running the command below:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```bash
+flutter upgrade
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Step 2
+This project works with the following code generators to create boilerplate code.
+
+- freezed
+- json_serializable
+- auto_route_generator
+- injectable_generator
+
+Go to project root and execute the following command in console to get the required dependencies:
+
+```bash
+# This command fetches the necessary Dependencies
+flutter pub get
+# This command generates the necessary dart files (json parsing, models, etc)
+flutter pub run build_runner build --delete-conflicting-outputs;
+```
+### That's it and run the app
