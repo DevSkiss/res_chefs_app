@@ -16,16 +16,21 @@ class MainBloc extends Cubit<MainState> {
   final MainRepository _repository = locator<MainRepository>();
   List<RestaurantsModel> _restaurants = [];
   void initialized() async {
+    await runAllThese();
+    await runAllThese();
     emit(state.copyWith(isLoading: true));
     try {
-      await getRestaurants();
-      await getChefs();
-      await getWorks();
-      await getResChefs();
       emit(state.copyWith(isLoading: false));
     } catch (e) {
       emit(state.copyWith(isLoading: false, hasError: false));
     }
+  }
+
+  Future<void> runAllThese() async {
+    await getRestaurants();
+    await getChefs();
+    await getWorks();
+    await getResChefs();
   }
 
   Future<void> getRestaurants() async {
